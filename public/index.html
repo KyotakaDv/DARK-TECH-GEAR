@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DARKGEAR · Loja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="logo">✦</span><span>DARK<b>GEAR</b><small>MINIMAL CYBER STORE</small></span></a>
+    <nav><a href="/" class="active">Vitrine</a><a href="/admin.html">Painel Admin</a></nav>
+    <button id="cartBtn" class="cart-btn">🛒 Carrinho <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="tag">High-Tech Cyber Accessories</span>
+      <h1>Design do Futuro.<br><span class="grad">Desempenho Sem Limites.</span></h1>
+      <p>Hardware e wearables de edição limitada para criadores, desenvolvedores e entusiastas da estética futurista.</p>
+    </section>
+
+    <section class="toolbar">
+      <div id="categories" class="chips"></div>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Buscar produtos...">
+        <label class="range">Até <b id="priceLabel">R$ 4.000,00</b>
+          <input id="maxPrice" type="range" min="300" max="4000" step="100" value="4000"></label>
+        <select id="sort">
+          <option value="featured">Destaques</option>
+          <option value="price-asc">Menor preço</option>
+          <option value="price-desc">Maior preço</option>
+          <option value="rating">Melhor avaliados</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="products" class="grid"></div>
+    <p id="empty" class="empty" hidden>Nenhum produto encontrado.</p>
+  </main>
+
+  <dialog id="cartDlg" class="drawer">
+    <header><h3>Seu carrinho</h3><button class="close" data-close>✕</button></header>
+    <div id="cartItems" class="cart-items"></div>
+    <footer class="cart-foot">
+      <div class="row"><input id="coupon" placeholder="Cupom (ex: DARK10)"><button id="applyCoupon" class="btn ghost">Aplicar</button></div>
+      <div class="row"><input id="cepCart" placeholder="CEP para entrega" maxlength="9"><button id="calcShip" class="btn ghost">Frete</button></div>
+      <div id="totals" class="totals"></div>
+      <p id="cartMsg" class="msg"></p>
+      <button id="goCheckout" class="btn primary wide" disabled>Finalizar compra →</button>
+    </footer>
+  </dialog>
+
+  <dialog id="detailDlg"><div id="detailBody"></div></dialog>
+
+  <dialog id="checkoutDlg">
+    <header><h3>Checkout seguro</h3><button class="close" data-close>✕</button></header>
+    <form id="checkoutForm" class="form">
+      <h4 class="span2">1. Dados e entrega</h4>
+      <input name="name" placeholder="Nome completo *" required>
+      <input name="email" type="email" placeholder="E-mail *" required>
+      <input name="cpf" placeholder="CPF">
+      <input name="zip" placeholder="CEP *" maxlength="9" required>
+      <input name="address" class="span2" placeholder="Rua / Avenida">
+      <input name="number" placeholder="Número">
+      <input name="city" placeholder="Cidade">
+      <h4 class="span2">2. Pagamento (simulado)</h4>
+      <label class="pay span2"><input type="radio" name="paymentMethod" value="pix" checked> PIX (instantâneo)</label>
+      <label class="pay span2"><input type="radio" name="paymentMethod" value="credit"> Cartão de crédito</label>
+      <label class="pay span2"><input type="radio" name="paymentMethod" value="boleto"> Boleto bancário</label>
+      <p id="checkoutMsg" class="msg span2"></p>
+      <div class="actions span2"><span>Total: <b id="checkoutTotal"></b></span><button class="btn primary" type="submit">Pagar agora</button></div>
+    </form>
+    <div id="successBox" class="success" hidden></div>
+  </dialog>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="shop.js"></script>
+</body>
+</html>

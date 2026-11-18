@@ -6,15 +6,15 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-* **Back-end:** Node.js, Express, Mongoose (MongoDB Atlas)[span_0](start_span)[span_0](end_span)
-* **Front-end:** HTML5, CSS3 (Design Neo-Brutalist/Cyberpunk), Vanilla JavaScript[span_1](start_span)[span_1](end_span)
-* **Ambiente de Desenvolvimento:** Termux & Android Stack[span_2](start_span)[span_2](end_span)
+* **Back-end:** Node.js, Express, Mongoose (MongoDB Atlas).
+* **Front-end:** HTML5, CSS3 (Design Neo-Brutalist/Cyberpunk), Vanilla JavaScript.
+* **Ambiente de Desenvolvimento:** Termux & Android Stack.
 
 ---
 
 ## ⚙️ Como Executar o Projeto
 
-Certifique-se de ter o **Node.js 18+** instalado em seu ambiente (como o Termux no Android ou PC)[span_3](start_span)[span_3](end_span).
+Certifique-se de ter o **Node.js 18+** instalado em seu ambiente (como o Termux no Android ou PC).
 
 1. **Clone o repositório e acesse a pasta do projeto:**
    ```bash

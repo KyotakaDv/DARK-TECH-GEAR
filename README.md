@@ -20,3 +20,5 @@ Certifique-se de ter o **Node.js 18+** instalado em seu ambiente (como o Termux 
    ```bash
    git clone [https://github.com/seu-usuario/DARK-TECH-GEAR.git](https://github.com/seu-usuario/DARK-TECH-GEAR.git)
    cd DARK-TECH-GEAR
+   npm install
+   npm run seed && npm start
